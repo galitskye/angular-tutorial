@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-	userName = '';
+	showSecret: boolean = false;
+	log: [] = [];
 
-	resetUser(): void {
-		this.userName = '';
+	onToggleDetails(): void {
+		this.showSecret = !this.showSecret;
+		// this.log.push(this.log.length + 1);
+		this.log.push(new Date());
 	}
 }
