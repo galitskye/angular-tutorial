@@ -1,9 +1,21 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h3>I'm in the AppComponent!</h3>
+            <ol>
+                <li>Chapter 1</li>
+                <li>Chapter 2</li>
+                <li>Chapter 3</li>
+                <li>Chapter 4</li>
+            </ol>
             <hr>
-            <app-servers></app-servers>
+            <label>Username</label>
+            <input type="text" class="form-control" [(ngModel)]="userName">
+            <p>{{ userName }}</p>
+            <button
+                class="btn btn-primary"
+                [disabled]="userName === ''"
+                (click)="userName = ''"
+            >Reset User</button>
         </div>
     </div>
 </div>
